@@ -7,7 +7,7 @@ const PostSchema = new Schema({
         required: [true, "User id is required"],
     },
     interest: [{
-        type: Shema.Types.ObjectId,
+        type: Schema.Types.ObjectId,
         ref: 'Interest',
     }],
     description: {
@@ -33,15 +33,8 @@ const PostSchema = new Schema({
         defult: null,
     },
     status: {
-        type: String,
-        required: [true, "Status is required"],
-        minlength: [1, "Status must be at least 1 character"],
-        maxlength: [1, "Status must be at most 1 character"],
-        enum: {
-            values: ['A', 'I'],
-            message: '{VALUE} is ot a valid status',
-        },
-        default: 'A',
+        type: boolean,
+        default: true,
     },
 }, { timestamps: true })
 
