@@ -33,7 +33,7 @@ const PostSchema = new Schema({
         defult: null,
     },
     status: {
-        type: boolean,
+        type: Boolean,
         default: true,
     },
 }, { timestamps: true })
