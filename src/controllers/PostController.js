@@ -21,6 +21,7 @@ export const createPost = async (req, res) => {
         user,
         description,
         photo: response.secure_url,
+        createdAt: Date.now(),
         interest: interest && interest,
       });
 
